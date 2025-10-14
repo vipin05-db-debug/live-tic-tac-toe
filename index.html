@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Live Tic Tac Toe 🎮</h1>
+  
+  <div class="room">
+    <input type="text" id="roomIdInput" placeholder="Enter room ID">
+    <button id="createRoom">Create Room</button>
+    <button id="joinRoom">Join Room</button>
+  </div>
+
+  <div class="game" id="game">
+    <div id="board" class="board">
+      <!-- 3x3 cells -->
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    
+    <div class="info">
+      <p id="status">Waiting for players...</p>
+      <p id="turnInfo"></p>
+      <p id="scoreBoard">X: 0 | O: 0</p>
+    </div>
+
+    <div class="chat">
+      <div id="chatMessages"></div>
+      <input type="text" id="chatInput" placeholder="Type message">
+      <button id="sendChat">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

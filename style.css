@@ -61,10 +61,19 @@ button:hover {
 }
 
 #chatMessages {
-  max-height: 150px;
+  max-height: 100px;
   overflow-y: auto;
   background: #2e0854;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+#chatInput{
+  height: 20px;
+  width: 50%;
+}
+
+#sendChat{
+  padding: 6px 12px;
+  width: 30%;
 }

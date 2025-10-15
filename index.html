@@ -1,51 +1,77 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Tic Tac Toe</title>
+<title>Tic Tac Toe</title>
 <link rel="stylesheet" href="style.css">
+<!-- Firebase compat SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
 <body>
 <div class="container">
-  <h1>Live Tic Tac Toe 🎮</h1>
-  
-  <div class="room">
-    <input type="text" id="roomIdInput" placeholder="Enter room ID">
-    <button id="createRoom">Create Room</button>
-    <button id="joinRoom">Join Room</button>
-  </div>
-
-  <div class="game" id="game">
-    <div id="board" class="board">
-      <!-- 3x3 cells -->
-      <div class="cell" data-index="0"></div>
-      <div class="cell" data-index="1"></div>
-      <div class="cell" data-index="2"></div>
-      <div class="cell" data-index="3"></div>
-      <div class="cell" data-index="4"></div>
-      <div class="cell" data-index="5"></div>
-      <div class="cell" data-index="6"></div>
-      <div class="cell" data-index="7"></div>
-      <div class="cell" data-index="8"></div>
+    <div class="name">
+        <p>Waiting for player...</p>
+        <h1>Tic Tac Toe</h1>
+        <button id="resetBtn">Reset</button>
     </div>
-    
+    <div class="room">
+        <input type="text" placeholder="Enter room ID" id="roomInput">
+        <button class="create-room" id="createRoomBtn">Create Room</button>
+        <button class="join" id="joinRoomBtn">Join</button>
+         <script>
+            const createRoomButton = document.querySelector('.create-room');
+
+            function updateButtonText() {
+                if (window.innerWidth <= 380) {
+                    createRoomButton.textContent = 'Create';
+                } else {
+                    createRoomButton.textContent = 'Create Room';
+                }
+            }
+
+            // Initial check
+            updateButtonText();
+
+            // Add event listener for window resize
+            window.addEventListener('resize', updateButtonText);
+        </script>
+
+    </div>
+    <div class="game" id="game">
+        <div id="board" class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+    </div>
     <div class="info">
-      <p id="status">Waiting for players...</p>
-      <p id="turnInfo"></p>
-      <p id="scoreBoard">X: 0 | O: 0</p>
+        <p id="player1">Player X<br>0</p>
+        <p id="draw">Draws<br>0</p>
+        <p id="player2">Player O<br>0</p>
     </div>
+    <div id="chat">
+        <div id="messages"></div>
+        <div class="chat-input-wrapper">
+            <input type="text" id="chatInput" placeholder="Type a message..." />
+            <button id="sendBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+            </button>
 
-    <div class="chat">
-      <div id="chatMessages"></div>
-      <input type="text" id="chatInput" placeholder="Chat.....">
-      <button id="sendChat">Send</button>
+        </div>
     </div>
-  </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
+
+

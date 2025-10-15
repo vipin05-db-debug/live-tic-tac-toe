@@ -486,4 +486,3 @@ function listenChat(id) {
     appendMessage(m.sender, m.msg);
   });
 }
-

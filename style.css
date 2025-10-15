@@ -1,4 +1,4 @@
-body {* {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -217,5 +217,3 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
-
-

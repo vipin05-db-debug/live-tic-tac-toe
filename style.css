@@ -29,6 +29,7 @@ body {
 
 .name {
     text-align: center;
+    margin-top:20;
     margin-bottom: 20px;
 }
 
@@ -217,3 +218,4 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
+

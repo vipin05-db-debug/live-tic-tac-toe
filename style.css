@@ -37,7 +37,7 @@ body {
     position: absolute;
     top: 5px;
     left: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
@@ -218,4 +218,5 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
+
 

@@ -89,7 +89,7 @@ body {
 .name h1 {
     font-size: 2.5rem;
     letter-spacing: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -265,6 +265,7 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
+
 
 
 

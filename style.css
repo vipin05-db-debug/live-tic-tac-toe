@@ -74,7 +74,7 @@ body {
 
 .name {
     text-align: center;
-    margin-top:40;
+    margin-top:30px;
     margin-bottom: 20px;
 }
 
@@ -90,7 +90,7 @@ body {
     font-size: 2.5rem;
     letter-spacing: 5px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .name button {
@@ -265,6 +265,7 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
+
 
 
 

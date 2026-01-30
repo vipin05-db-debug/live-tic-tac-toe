@@ -14,6 +14,51 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
 }
+/* SPLASH SCREEN STYLES */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Black Background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; /* Ensures it sits on top of everything */
+    transition: opacity 1s ease-out; /* Smooth fade out */
+}
+
+.splash-logo {
+    width: 140px; /* Adjust size as needed */
+    animation: zoomPulse 1s infinite alternate; /* Zoom In/Out Loop */
+}
+
+.loading-text {
+    color: white;
+    margin-top: 20px;
+    font-family: monospace;
+    letter-spacing: 2px;
+    animation: blink 1s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes zoomPulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.3); } /* Zooms in 30% */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Class to hide the screen */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
 .container {
     max-width: 100%;
@@ -218,5 +263,6 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
+
 
 

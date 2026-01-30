@@ -20,6 +20,18 @@ const db = firebase.database();
 // ---------------- Main ----------------
 document.addEventListener('DOMContentLoaded', () => {
   // DOM
+  // --- SPLASH SCREEN LOGIC ---
+    const splash = document.getElementById('splash-screen');
+    
+    setTimeout(() => {
+        splash.classList.add('hidden'); // Fades out
+        
+        // Completely remove it from DOM after fade completes (optional)
+        setTimeout(() => {
+            splash.style.display = 'none'; 
+        }, 1000); 
+        
+    }, 3000);
   const createRoomBtn = document.querySelector('.create-room');
   const joinRoomBtn = document.querySelector('.join');
   const roomInput = document.querySelector('.room input');
@@ -486,3 +498,4 @@ function listenChat(id) {
     appendMessage(m.sender, m.msg);
   });
 }
+

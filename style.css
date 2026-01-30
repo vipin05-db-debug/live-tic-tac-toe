@@ -74,7 +74,7 @@ body {
 
 .name {
     text-align: center;
-    margin-top:20;
+    margin-top:40;
     margin-bottom: 20px;
 }
 
@@ -120,7 +120,7 @@ body {
 
 .room input {
     padding: 6px 15px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border: none;
     border-radius: 50px;
     width: 150px;
@@ -184,7 +184,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom:10;
+    margin-bottom:40;
 }
 
 #chat {
@@ -264,6 +264,7 @@ body {
   padding: 8px 0;
   font-style: italic;
 }
+
 
 
 
